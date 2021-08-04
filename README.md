@@ -82,6 +82,19 @@ settings()->group('team.2')->set('app_name', 'My Team 2 App');
 settings()->group('team.2')->get('app_name');
 
 // You can use facade
-\Settings::group('team.1')->get('app_name')
+\Settings::group('team.1')->get('app_name');
 
+```
+
+### Another helper function
+> This helper use only for fetching setting
+```php
+// Fetch team.2 owner_name from cached settings
+_settings('team.2', 'owner_name');
+
+// Fetch all settings of group team.2 from cached settings
+_settings('team.2');
+
+// Fetch team.2 owner_name and reset setting cache from database
+_settings('team.2', 'owner_name', true);
 ```
