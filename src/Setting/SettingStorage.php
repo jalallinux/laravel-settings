@@ -39,7 +39,7 @@ interface SettingStorage
      * @param $val string|mixed
      * @return mixed
      */
-    public function set(string $key, $val = null);
+    public function set($key, $val = null);
 
     /**
      * Remove a setting from storage.

@@ -47,7 +47,7 @@ class SettingEloquentStorage implements SettingStorage
     /**
      * {@inheritdoc}
      */
-    public function set(string $key, $val = null)
+    public function set($key, $val = null)
     {
         // if its an array, batch save settings
         if (is_array($key)) {
