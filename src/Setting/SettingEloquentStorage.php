@@ -113,9 +113,9 @@ class SettingEloquentStorage implements SettingStorage
     /**
      * Get settings eloquent model.
      *
-     * @return Builder
+     * @return Setting
      */
-    protected function getSettingModel(): Builder
+    protected function getSettingModel(): Setting
     {
         return app('\JalalLinuX\Settings\Setting\Setting');
     }

@@ -2,6 +2,7 @@
 
 namespace JalalLinuX\Settings\Setting;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
@@ -10,8 +11,8 @@ class Setting extends Model
 
     protected $table = 'settings';
 
-    public function scopeGroup($query, $groupName)
+    public function scopeGroup(Builder $query, $groupName): Builder
     {
-        return $query->whereGroup($groupName);
+        return $query->where('group', $groupName);
     }
 }
