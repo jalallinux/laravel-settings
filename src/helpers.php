@@ -39,3 +39,11 @@ if (!function_exists('_settings')) {
             : settings()->group($group)->get($key, null, $fresh);
     }
 }
+
+if (!function_exists('isJsonString')) {
+    function isJsonString(string $string): bool
+    {
+        json_decode($string);
+        return json_last_error() === JSON_ERROR_NONE;
+    }
+}
