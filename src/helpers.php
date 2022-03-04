@@ -24,22 +24,6 @@ if (! function_exists('settings')) {
     }
 }
 
-if (!function_exists('_settings')) {
-    /**
-     * @param string $group
-     * @param string $key
-     * @param bool $fresh
-     * @return mixed
-     */
-    function _settings(string $group, string $key = '*', bool $fresh = false)
-    {
-        /* $fresh ignore cached */
-        return $key == '*'
-            ? settings()->group($group)->all($fresh)
-            : settings()->group($group)->get($key, null, $fresh);
-    }
-}
-
 if (!function_exists('isJsonString')) {
     function isJsonString(string $string): bool
     {
