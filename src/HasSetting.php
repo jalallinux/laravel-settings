@@ -9,7 +9,7 @@ trait HasSetting
         return settings()->group(static::class)->get($key);
     }
 
-    public static function setSetting(string $key, $value = null)
+    public static function setSetting($key, $value = null)
     {
         return settings()->group(static::class)->set($key, $value);
     }
